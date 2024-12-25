@@ -19,17 +19,17 @@ export default function LoginForm() {
   const [isPending, startTransition] = useTransition()
   const router = useRouter()
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<LoginFormData>({
+  const { register , handleSubmit, formState: { errors },} = useForm<LoginFormData>({
     resolver: zodResolver(LoginSchema),
   })
 
   const onSubmit = (data: LoginFormData) => {
     startTransition(async () => {
+
+
       const result = await login(data)
+
+      console.log("result" ,result);
 
       if (result.error) {
         errorToast(`${result.error}`)
