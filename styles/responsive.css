@@ -1,0 +1,49 @@
+@layer utilities {
+  /* Responsive text utilities */
+  .text-responsive {
+    @apply text-sm md:text-base;
+  }
+
+  .heading-responsive {
+    @apply text-xl md:text-2xl lg:text-3xl;
+  }
+
+  /* Responsive spacing utilities */
+  .p-responsive {
+    @apply p-4 md:p-6 lg:p-8;
+  }
+
+  .m-responsive {
+    @apply m-4 md:m-6 lg:m-8;
+  }
+
+  .gap-responsive {
+    @apply gap-4 md:gap-6 lg:gap-8;
+  }
+
+  /* Responsive grid utilities */
+  .grid-responsive {
+    @apply grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+  }
+
+  /* Responsive container utilities */
+  .container-responsive {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+
+  /* Responsive scrollbar styling */
+  .scrollbar-responsive {
+    @apply scrollbar-thin scrollbar-thumb-rounded scrollbar-thumb-gray-300 dark:scrollbar-thumb-gray-700;
+  }
+
+  /* Hide scrollbar for mobile */
+  @media (max-width: 768px) {
+    .scrollbar-responsive {
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      &::-webkit-scrollbar {
+        display: none;
+      }
+    }
+  }
+}
